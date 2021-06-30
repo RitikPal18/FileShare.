@@ -1,0 +1,961 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* scroll bar optimise */
+/* width  */
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8b13fc; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8b13fc; 
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html,
+body {
+  /* margin: 0;
+  padding: 0;
+  color: #3c484e;
+  font-family: "Open Sans", sans-serif; 
+  background-color: white; */
+   /* background-image: linear-gradient(
+    45deg,
+    #8607fd 0,
+    #b370f3 71%,
+    #fa75f3 100% 
+   ); */
+   background-repeat:no-repeat;
+   scroll-behavior: smooth;
+ }
+ .collapse{
+   visibility: hidden;
+   /* display: none; */
+   content-visibility: hidden;
+   /* height: -100px; */
+ }
+.navbar{
+  visibility: hidden;
+  /* display: none; */
+  content-visibility: hidden;
+  /* height: 1px; */
+}
+
+/* clock */
+#output {
+  /* font-family:cursive; */
+  font-size: 40px;
+  font-weight: bold;
+  color:#8607fd;
+  margin-left: 15px;
+  margin-top: 10px; 
+}
+
+/* file input */
+.Form__content {
+  background: #fff;
+  border-radius: 2rem;
+  padding: 2rem;
+  max-width: 440px;
+  flex: 1 0 auto;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 15%);
+  height: 252px;
+  margin-top: 50px;
+  justify-content: center;
+  margin-left: 60px;
+  margin-right: 60px;
+  width: 440px;
+  position: fixed;
+}
+
+.Form_control {
+  position: relative;
+}
+
+.Form__content:hover{
+  content: " ";
+}
+
+.Form__label {
+  cursor: pointer;
+  display: flex;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 3px dashed #8b13fc;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Form__label i {
+  font-size: 5rem;
+  color: #8b13fc;
+  margin-bottom: 0.75rem;
+}
+
+.Form__label span {
+  color: #ababab;
+  text-align: center;
+}
+
+.Form__input {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+} 
+
+.get_link_button {
+  /* background-color: transparent; */
+  outline: none;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  line-height: 14px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color: white;
+  /* font-family: cursive; */
+  background-color: #8607fd;
+  visibility: hidden;
+}
+
+.get_link_button{
+  margin-top: 26px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  background-color: #8607fd;
+  transition: all 0.25s ease;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.get_link_button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 40px 0px rgb(0 0 0 / 10%);
+}
+.cancel-btn{
+  background-color:transparent; 
+  border-width: 0px;
+  float:right; 
+  margin-right:10px;
+
+}
+/* file input */
+
+
+/* intro css  start*/
+.in-he{
+  font-size: 40px;
+  font-weight: bolder;
+  color: white;
+
+}
+.in-he-o{
+  font-size: 30px;
+  color: white;
+  font-weight: bolder;
+}
+#p-1{
+  font-size: 30px;
+  color: white;
+  font-weight: bolder;
+}
+/* intro css end */
+
+/* upload div starts here */
+#formdiv_2{
+visibility: hidden;
+height: 430px;
+}
+
+.up_img{
+  border-radius: 100%;
+  visibility: hidden;
+  height: 271px;
+  margin-left: 64px;
+  margin-top: -33px;
+}
+
+#link{
+  visibility: hidden;
+  margin-left: -8px;
+  margin-top: 10px;
+  width: 350px;
+  height: 20px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style:hidden ;
+  outline: none;
+}
+
+.copy_link{
+  visibility: hidden;
+  /* margin-left: 300px; */
+  float: right;
+  margin-top: 10px;
+  margin-right: -9px;
+  border-width: 0px;
+  background-color: transparent;
+}
+
+.add_more_btn{
+  text-decoration: none; 
+  color: white; 
+}
+
+.add_more_btn:hover{
+  text-decoration: none; 
+  color: white;
+}
+/* upload div ends here */
+
+/* nav tab start */
+.Form__content_nav {
+  background: #fff;
+  border-radius: 2rem;
+  padding: 2rem;
+  max-width: 480px;
+  flex: 1 0 auto;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 15%);
+  bottom: 20px;
+  margin-left: 40%;
+  position: fixed;
+  width: 300px;
+  height: 60px;
+  padding-top: 15px;
+}
+.nav_icon_1{
+  font-size: 25px;
+  margin-left: -7px;
+  /* color: #8607fd; */
+  cursor: pointer;
+}
+.nav_icon_2{
+  margin-left: 70px;
+  font-size: 25px;
+  color: #8607fd;
+  cursor: pointer;
+}
+.nav_icon_3{
+  margin-left: 75px;
+  font-size: 25px;
+  color: #8607fd;
+  cursor: pointer;
+}
+.nav_icon_1:hover{
+  color: blue;
+}
+.nav_icon_2:hover{
+  color: blue;
+}
+.nav_icon_3:hover{
+  color: blue;
+}  
+/* on file chosse  tab*/
+.Form__content_file_nav{
+  visibility: hidden;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 2rem;
+  max-width: 480px;
+  flex: 1 0 auto;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 15%);
+  /* margin-top: 370px; */
+  bottom: 20px;
+  margin-left: 34%;
+  position: fixed;
+  width: 300px;
+  height: 60px;
+  padding-top: 15px;
+}
+.nav_icon_file_1{
+  visibility: hidden;
+  font-size: 25px;
+  margin-left: -7px;
+  color: #8607fd;
+  cursor: pointer;
+}
+.nav_icon_file_2{
+  visibility: hidden;
+  margin-left: 70px;
+  font-size: 25px;
+  color: #8607fd;
+  cursor: pointer;
+}
+.nav_icon_file_3{
+  visibility: hidden;
+  margin-left: 75px;
+  font-size: 25px;
+  color: #8607fd;
+  cursor: pointer;
+}
+.nav_icon_file_1:hover{
+  color: blue;
+}
+.nav_icon_file_2:hover{
+  color: blue;
+}
+.nav_icon_file_3:hover{
+  color: blue;
+}
+/* nav tab end */
+.Form__content_file_up_3{
+  background: #fff;
+  border-radius: 2rem;
+  padding: 2rem;
+  max-width: 480px;
+  flex: 1 0 auto;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 15%);
+  bottom: 20px;
+  margin-left: 40%;
+  position: fixed;
+  width: 300px;
+  height: 60px;
+  padding-top: 15px;
+  visibility: hidden;
+}
+.nav_icon_file_up_1{
+  font-size: 25px;
+  margin-left: -7px;
+  /* color: #8607fd; */
+  cursor: pointer;
+  visibility: hidden;
+}
+.nav_icon_file_up_2{
+  margin-left: 70px;
+  font-size: 25px;
+  color: #8607fd;
+  cursor: pointer; 
+  visibility: hidden;
+}
+.nav_icon_file_up_3{
+  margin-left: 75px;
+  font-size: 25px;
+  color: #8607fd;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+/* .title-div {
+  width: 1100px;
+  height: 160px;
+  display: inline-block;
+  margin-left: 10px;
+   margin-right: 25%;
+  margin-top: 160px;
+  margin-bottom: 10px;
+  background-color: blue;
+}  */
+/* ad div */
+
+.outer-f2-t2-addiv{
+  padding: 20px;
+  height: 320px;
+  /* max-width: 1100px; */
+  background-color: wheat;  
+  margin-top: 10px;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
+.outer-f2-t2-addiv-r{
+  float: right;
+  margin-right:   -1000px;
+  padding: 20px;
+  height: 500px;
+  width: 900px;
+  background-color: blueviolet;
+  margin-top: -200px;
+  border-radius: 15px;
+  /* visibility: hidden; */
+
+}
+
+/* download css starts here */
+.download-div{
+  height: 400px;
+  width: 1100px;
+  margin-top: 150px;
+  /* position: relative; */
+}
+
+.do-files{
+  background-color: #8607fd;
+  height: 250px;
+}
+#download_button{
+  visibility: visible;
+  margin-top: 60px;
+}
+/* download css ends here  */
+
+
+/* about page css start */
+.hr1{
+  margin-top: 50px; 
+  width: 80%; 
+  margin-left: 10%; 
+  margin-right: 10%;
+  color: blue;
+}
+.hr2{
+  margin-top: 50px; 
+  width: 80%; 
+  margin-left: 10%; 
+  margin-right: 10%;
+  color: blue;
+  
+}
+.h-product{
+  font-size: 30px;
+  font-weight: bold;
+  /* font-family: cursive; */
+  text-underline-position:above;
+  color: rgb(58, 99, 102)
+}
+.outer-f2-t2-abdiv{
+  padding: 20px;
+  height: 320px;
+
+  margin-top: 10px;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+.outer-f2-t2-abdiv-0{
+  padding: 20px;
+  height: 50px;
+  margin-top: 10px;
+  margin-left: 13%;
+  margin-right: 13%;
+}
+.outer-f2-t2-abdiv-c{
+  padding: 20px;
+  height: 400px;
+  margin-top: 20px;
+  margin-left: 13%;
+  margin-right: 13%;
+
+}
+.ab-ab-1{
+  font-size: 30px;
+  color: rgb(172, 172, 172);
+  font-weight: bolder;
+  /* font-family: cursive; */
+  margin-left: 20px;
+}
+.outer-f2-t2-abdiv ul li{
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+#name{
+  width: 430px;
+  outline-color: #8607fd;
+}
+#email-txt{
+  float: right;
+  margin-right: 550px;
+  margin-top: -55px;
+}
+#email{
+  float: right;
+  margin-right: 170px;
+  width: 430px;
+  margin-top: -54px;
+  outline-color: #8607fd;
+}
+#textarea{
+  width: 925px;
+  height: 200px;
+  outline-color: #8607fd;
+}
+.Send-Button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 12px 24px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  position: fixed;
+  /* font-family: cursive; */
+  font-weight: bolder;
+  line-height: 14px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  color:white;
+  background-color: #8607fd;
+}
+.Send_button{
+  padding: 15px 30px;
+  border-radius: 50px;
+  background-color: #8607fd;
+  transition: all 0.25s ease;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+.Send_button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 20px 40px 0px rgb(0 0 0 / 10%);
+}
+/* about page css end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile device css starts here */
+@media screen and (max-width: 600px) {
+  .collapse{
+    visibility: visible;
+    content-visibility: visible;
+
+  }
+ .navbar{
+   visibility: visible;
+   content-visibility: visible;
+ }
+  .logo{
+    height: 50px;
+    width: 50px;
+    margin-top:-20px;
+    margin-left: -10px;
+  }
+
+  .Form__content {
+    background: #fff;
+    border-radius: 2rem;
+    padding: 2rem;
+    max-width: 100%;
+    flex: 1 0 auto;
+    box-shadow: 1px 20px 20px 0px rgb(0 0 0 / 15%);
+    height: 250px;
+    margin-top: 50px;
+    justify-content: center;
+    margin-left: 0px;
+    margin-right: 0px;
+  
+  }
+
+  .title-div {
+    width: 80%;
+    height: 400px;
+    /* display: inline-block; */
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    background-color: blue;
+  }
+  .outer-f2-t2-addiv-r {
+    width: 100px;
+    height: 85px;
+    /* visibility: visible; */
+    margin-left: 1px;
+    margin-top: 400px;
+  }
+  .inner-f2-t2-addiv{
+    margin: 0 auto;
+    max-width: 1100px;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 3px;
+    margin-top: 40px;
+  }
+  .hr1 {
+    margin-top: 50px; 
+    width: 80%; 
+    margin-left: 10%; 
+    margin-right: 10%; 
+  }
+  .outer-f2-t2-addiv{
+    padding: 20px;
+    height: 220px;
+    width: 100%;
+    /* max-width: 1100px; */
+    /* background-color: black; */
+    margin-top: 10px;
+    margin-left: 0%;
+    /* margin-right: 13%; */
+  }
+  .inner-f2-t2-addiv{
+    margin: 0 auto;
+    max-width: 1100px;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-left: 0%;
+  }
+
+  .up_img{
+    border-radius: 100%;
+    height: 254px;
+    visibility: hidden;
+    /* margin-top: -759px; */
+    /* margin-left: 90px; */
+    margin-left: 65px;
+  }
+
+  #link{
+    visibility: hidden;
+    /* background-color: black; */
+    margin-left: -8px;
+    margin-top: 12px;
+    width: 310px;
+  
+  }
+  .copy_link{
+    visibility: hidden;
+    /* margin-left: 300px; */
+    float: right;
+      margin-top: 10px;
+      margin-right: -9px;
+      border-width: 0px;
+      background-color: transparent;
+  }
+  /* nav tab start */
+  .Form__content_nav {
+    background: #fff;
+    /* position: fixed; */
+    border-radius: 0px;
+    width: 100%;
+    height: 65px;
+    float: left;
+    margin-left: 0px;
+    position: absolute;
+    bottom: 0px;
+
+    /* visibility: hidden; */
+  }
+  .nav_icon_1{
+    font-size: 25px;
+    margin-left: 0px;
+    padding-top: 20px;
+    color: #8607fd;
+    cursor: pointer;
+    /* visibility: hidden; */
+
+  }
+  .nav_icon_2{
+    margin-left: 102px;
+    font-size: 25px;
+    color: #8607fd;
+    cursor: pointer;
+    /* visibility: hidden; */
+  }
+  .nav_icon_3{
+    margin-left: 98px;
+    font-size: 25px;
+    color: #8607fd;
+    cursor: pointer;
+    /* visibility: hidden; */
+  }
+  .nav_icon_1:hover{
+    color: blue;
+    visibility: hidden;
+  }
+  .nav_icon_2:hover{
+    color: blue;
+    visibility: hidden;
+  }
+  .nav_icon_3:hover{
+    color: blue;
+    visibility: hidden;
+  }  
+  .Form__content_file_nav{
+    visibility: hidden;
+    background: #fff;
+    border-radius: 0px;
+    width: 100%;
+    height: 65px;
+    float: left;
+    margin-left: -33px;
+    position: fixed;
+    bottom: 0px;
+    /* visibility: hidden; */
+
+  }
+  .nav_icon_file_1{
+    font-size: 25px;
+    margin-left: 0px;
+    padding-top: 20px;
+    color: #8607fd;
+    cursor: pointer;
+    visibility: hidden;
+
+  }
+  .nav_icon_file_2{
+    margin-left: 102px;
+    font-size: 25px;
+    color: #8607fd;
+    cursor: pointer;
+    visibility: hidden;
+
+  }
+  .nav_icon_file_3{
+    margin-left: 98px;
+    font-size: 25px;
+    color: #8607fd;
+    cursor: pointer;
+    visibility: hidden;
+  }
+  .nav_icon_file_1:hover{
+    color: blue;
+    visibility: hidden;
+  }
+  .nav_icon_file_2:hover{
+    color: blue;
+    visibility: hidden;
+  }
+  .nav_icon_file_3:hover{
+    color: blue;
+    visibility: hidden;
+  }
+
+  .Form__content_file_up_3{
+    visibility: hidden;
+    background: #fff;
+    border-radius: 0px;
+    width: 100%;
+    height: 65px;
+    float: left;
+    margin-left: 0px;
+    position: absolute;
+    bottom: 0px;
+  }
+  .nav_icon_file_up_1{
+    font-size: 25px;
+    margin-left: 0px;
+    padding-top: 20px;
+    color: #8607fd;
+    cursor: pointer;
+    visibility: hidden;
+  }
+  .nav_icon_file_up_2{
+    margin-left: 102px;
+    font-size: 25px;
+    color: #8607fd;
+    cursor: pointer;
+    visibility: hidden;
+  }
+  .nav_icon_file_up_3{
+    margin-left: 98px;
+    font-size: 25px;
+    color: #8607fd;
+    cursor: pointer;
+    visibility: hidden;
+  }
+  /* nav tab end */
+
+
+  /* download css starts here */
+  .download-div{
+    height: 400px;
+    width: 1100px;
+    /* margin-top: 50px; */
+    /* position: relative; */
+  }
+
+  .do-files{
+    background-color: #8607fd;
+    height: 250px;
+  }
+  #download_button{
+    visibility: visible;
+    margin-top: 60px;
+  }
+  /* download css ends here  */
+
+
+
+
+
+
+
+  /* about page css start */
+
+  .hr2{
+    margin-top: 50px; 
+    width: 80%; 
+    margin-left: 10%; 
+    margin-right: 10%;
+    color: blue;
+    
+  }
+  .h-product{
+    font-size: 30px;
+    font-weight: bold;
+    /* font-family: cursive; */
+    text-underline-position:above;
+    color: rgb(58, 99, 102)
+  }
+  .outer-f2-t2-abdiv{
+    padding: 20px;
+    height: 320px;
+
+    margin-top: 10px;
+    margin-left: 13%;
+    margin-right: 13%;
+  }
+  .outer-f2-t2-abdiv-0{
+    padding: 20px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 13%;
+    margin-right: 13%;
+  }
+  .outer-f2-t2-abdiv-c{
+    padding: 20px;
+    height: 400px;
+    margin-top: 20px;
+    margin-left: 13%;
+    margin-right: 13%;
+
+  }
+  .ab-ab-1{
+    font-size: 25px;
+    color: rgb(172, 172, 172);
+    font-weight: bolder;
+    /* font-family: cursive; */
+    margin-left: -60px;
+  }
+  .outer-f2-t2-abdiv ul li{
+    margin-top: 10px;
+    font-size: 17px;
+    margin-left: -63px;
+  }
+  #Name{
+    float: left;
+    margin-left: -46px;
+  }
+  #name{
+    width: 344px;
+    outline-color: #8607fd;
+    margin-left: -46px;
+  }
+  #email-txt{
+    float: left;
+    margin-left: -46px;
+    width: 50px;
+    margin-top: 22px;
+    outline-color: #8607fd;
+  }
+  #email{
+    float: left;
+    margin-left: -46px;
+    width: 344px;
+    margin-top: 1px;
+    outline-color: #8607fd;
+  }
+  #msg{
+    float: left;
+    margin-left: -46px;
+    /* width: 64px; */
+    margin-top: 22px;
+    outline-color: #8607fd;
+  }
+  #textarea{
+    width: 339px;
+    height: 200px;
+    outline-color: #8607fd;
+    margin-left: -45px;
+    margin-top: 3px;
+  }
+
+  .Send-Button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 12px 24px;
+    float: left;
+    margin-left: -20px;
+    margin-top: 10px;
+    font-size: 14px;
+    position: fixed;
+    /* font-family: cursive; */
+    font-weight: bolder;
+    line-height: 14px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    color:white;
+    background-color: #8607fd;
+  }
+  .Send_button{
+    padding: 15px 30px;
+    border-radius: 50px;
+    background-color: #8607fd;
+    transition: all 0.25s ease;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+  }
+  .Send_button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 20px 40px 0px rgb(0 0 0 / 10%);
+  }
+}
+/* mobile divice css ends here */
+
+
+/* tab or large screen css starts here */
